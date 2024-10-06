@@ -23,7 +23,7 @@ class SecondStepFragment : Fragment() {
 
         val button = view.findViewById<Button>(R.id.btn)
         button.setOnClickListener {
-            findNavController().navigate(R.id.thirdStepCompose)
+            findNavController().navigate(R.id.action_secondStepFragment_to_thirdStepCompose)
         }
     }
 }
