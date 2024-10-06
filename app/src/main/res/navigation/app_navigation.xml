@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/firstStepFragment">
+
+
+    <fragment
+        android:id="@+id/firstStepFragment"
+        android:name="com.example.sampleapp.FirstStepFragment"
+        android:label="FirstStepFragment">
+
+        <action
+            android:id="@+id/action_firstStepFragment_to_secondStepFragment"
+            app:destination="@id/secondStepFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondStepFragment"
+        android:name="com.example.sampleapp.SecondStepFragment"
+        android:label="SecondStepFragment">
+        <action
+            android:id="@+id/action_secondStepFragment_to_thirdStepCompose"
+            app:destination="@id/thirdStepCompose" />
+    </fragment>
+
+    <!-- Here's your composable screen -->
+    <composable
+        android:id="@+id/thirdStepCompose"
+        android:name="com.example.sampleapp.ComposeScreenKt\$ThirdScreen" >
+
+        <action
+            android:id="@+id/action_thirdStepCompose_to_fourthFragment"
+            app:destination="@id/fourthFragment" />
+
+    </composable>
+
+    <fragment
+        android:id="@+id/fourthFragment"
+        android:name="com.example.sampleapp.FourthFragment"
+        android:label="fragment_fourth"
+        tools:layout="@layout/fragment_fourth" />
+
+</navigation>
